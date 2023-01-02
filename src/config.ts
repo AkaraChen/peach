@@ -2,9 +2,12 @@ export interface PeachConfig {
     exitOnCancel: boolean
 }
 
-export const defineConfig = (config: Partial<PeachConfig>): PeachConfig => {
-    return {
-        exitOnCancel: false,
-        ...config
-    };
+const defaultConfig: PeachConfig = {
+    exitOnCancel: true
+};
+
+export let config: PeachConfig = defaultConfig;
+
+export const setConfig = (input: Partial<PeachConfig>) => {
+    config = Object.assign({}, config, input);
 };

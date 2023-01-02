@@ -1,0 +1,7 @@
+{
+    "extends": ["akrc"],
+    "rules": {
+        "unicorn/no-process-exit": "off",
+        "unicorn/no-await-expression-member": "off"
+    }
+}

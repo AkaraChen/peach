@@ -1,8 +1,8 @@
 import prompts from 'prompts';
-import { BaseProperties } from './type';
+import { BaseOptions } from './type';
 import { promptsOptions } from './util';
 
-export type SelectProperties = BaseProperties & {
+export type SelectProperties = BaseOptions & {
     choices: Array<
         | string
         | {

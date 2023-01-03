@@ -1,8 +1,8 @@
 import prompts from 'prompts';
-import { BaseProperties } from './type';
+import { BaseOptions } from './type';
 import { promptsOptions } from './util';
 
-export type ConfirmProperties = BaseProperties;
+export type ConfirmProperties = BaseOptions;
 
 export async function confirm(optionsRaw: ConfirmProperties | string) {
     let options: ConfirmProperties;

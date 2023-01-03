@@ -1,5 +1,8 @@
-export interface BaseProperties {
+export interface BaseOptions {
     message: string;
-    initial?: any;
-    onCancel?(): void
+    initial?: string | number | boolean | Date;
+    onCancel?(): void;
+    validate?(): boolean;
 }
+
+export type textStyles = 'default' | 'password' | 'invisible' | 'emoji'

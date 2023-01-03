@@ -1,9 +1,10 @@
 import prompts from 'prompts';
-import { BaseProperties } from './type';
+import { BaseOptions, textStyles } from './type';
 import { promptsOptions } from './util';
 
-export type TextOptions = BaseProperties & {
+export type TextOptions = BaseOptions & {
     initial?: string;
+    style?: textStyles
 };
 
 export async function text(optionsRaw: TextOptions | string) {
@@ -19,4 +20,19 @@ export async function text(optionsRaw: TextOptions | string) {
         options.initial = initial;
     }
     return (await prompts(options, promptsOptions())).result as string;
+}
+
+export type NumberOptions = TextOptions & {
+    max: number;
+    min: number;
+    float: boolean;
+    increment: number;
+}
+
+export async function number(optionsRaw: NumberOptions) {
+    return (await prompts({
+        type: 'number',
+        name: 'result',
+        ...optionsRaw
+    }, promptsOptions())).result as number;
 }

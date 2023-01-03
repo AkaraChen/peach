@@ -29,10 +29,20 @@ export type NumberOptions = TextOptions & {
     increment?: number;
 }
 
-export async function number(optionsRaw: NumberOptions) {
-    return (await prompts({
+export async function number(optionsRaw: NumberOptions | string) {
+    let options: prompts.PromptObject = {
         type: 'number',
-        name: 'result',
-        ...optionsRaw
+        name: 'result'
+    };
+    if (typeof optionsRaw === 'string') {
+        options.message = optionsRaw;
+    } else {
+        options = {
+            ...options,
+            ...optionsRaw
+        };
+    }
+    return (await prompts({
+        ...options
     }, promptsOptions())).result as number;
 }

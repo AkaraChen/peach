@@ -6,7 +6,7 @@ A few API adapter for some CLI tools.
 
 ### All in one
 
-You don't need to install any other dependencies anymore, peach bundle everything you need。
+You don't need to install any other dependencies anymore, peach bundle everything you need. With Pure ESM bundle, effortless import and tree shaking.
 
 ### Delightful default options
 

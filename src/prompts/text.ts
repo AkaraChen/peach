@@ -23,10 +23,10 @@ export async function text(optionsRaw: TextOptions | string) {
 }
 
 export type NumberOptions = TextOptions & {
-    max: number;
-    min: number;
-    float: boolean;
-    increment: number;
+    max?: number;
+    min?: number;
+    float?: boolean;
+    increment?: number;
 }
 
 export async function number(optionsRaw: NumberOptions) {

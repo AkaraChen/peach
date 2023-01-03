@@ -4,18 +4,21 @@ import { promptsOptions } from './util';
 
 export type ConfirmProperties = BaseOptions;
 
-export async function confirm(optionsRaw: ConfirmProperties | string) {
-    let options: ConfirmProperties;
-    options = typeof optionsRaw === 'string' ? { message: optionsRaw } : optionsRaw;
-    const { message, initial = true } = options;
+export async function confirm(optionsRaw?: ConfirmProperties | string) {
+    const options: prompts.PromptObject = {
+        type: 'confirm',
+        name: 'result'
+    };
+    if (optionsRaw) {
+        if (typeof optionsRaw === 'string') {
+            options.message = optionsRaw;
+        } else {
+            Object.assign(options, optionsRaw);
+        }
+    }
     return (
         await prompts(
-            {
-                type: 'confirm',
-                name: 'result',
-                message: message,
-                initial
-            },
+            options,
             promptsOptions()
         )
     ).result as boolean;

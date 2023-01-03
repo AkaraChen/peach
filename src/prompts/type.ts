@@ -1,5 +1,5 @@
 export interface BaseOptions {
-    message: string;
+    message?: string;
     initial?: string | number | boolean | Date;
     onCancel?(): void;
     validate?(): boolean;

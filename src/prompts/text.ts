@@ -7,7 +7,7 @@ export type TextOptions = BaseOptions & {
     style?: textStyles
 };
 
-export async function text(optionsRaw: TextOptions | string) {
+export async function text(optionsRaw: TextOptions | string = '') {
     const options: prompts.PromptObject = {
         type: 'text',
         name: 'result'
@@ -15,9 +15,7 @@ export async function text(optionsRaw: TextOptions | string) {
     if (typeof optionsRaw === 'string') {
         options.message = optionsRaw;
     } else {
-        const { message, initial } = optionsRaw;
-        options.message = message;
-        options.initial = initial;
+        Object.assign(options, optionsRaw);
     }
     return (await prompts(options, promptsOptions())).result as string;
 }
@@ -29,7 +27,7 @@ export type NumberOptions = TextOptions & {
     increment?: number;
 }
 
-export async function number(optionsRaw: NumberOptions | string) {
+export async function number(optionsRaw: NumberOptions | string = '') {
     let options: prompts.PromptObject = {
         type: 'number',
         name: 'result'

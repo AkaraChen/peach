@@ -1,14 +1,11 @@
-import prompts from 'prompts';
+import prompts, { Choice } from 'prompts';
 import { BaseOptions } from './type';
 import { promptsOptions } from './util';
 
-export type Choice = string | {
-    title: string;
-    value: string;
-}
+export type PeachChoice = string | Choice
 
 export type SelectProperties = BaseOptions & {
-    choices: Array<Choice>;
+    choices: Array<PeachChoice>;
     multiselect?: boolean;
 };
 
@@ -16,7 +13,8 @@ export async function select(optionsRaw: SelectProperties) {
     const options: prompts.PromptObject = {
         name: 'result',
         type: optionsRaw.multiselect ? 'multiselect' : 'select',
-        choices: [] as Array<prompts.Choice>
+        choices: [],
+        message: optionsRaw.message
     };
     for (const choice of optionsRaw.choices) {
         if (options.choices && Array.isArray(options.choices)) {

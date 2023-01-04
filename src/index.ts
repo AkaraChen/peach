@@ -1,3 +1,3 @@
-export * from './logger';
+export * from './internal';
 export * from './prompts';
-export * from './colors';
+export * from './spinner';

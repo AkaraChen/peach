@@ -35,12 +35,7 @@ export async function number(optionsRaw: NumberOptions | string = '') {
     if (typeof optionsRaw === 'string') {
         options.message = optionsRaw;
     } else {
-        options = {
-            ...options,
-            ...optionsRaw
-        };
+        Object.assign(options, optionsRaw);
     }
-    return (await prompts({
-        ...options
-    }, promptsOptions())).result as number;
+    return (await prompts(options, promptsOptions())).result as number;
 }

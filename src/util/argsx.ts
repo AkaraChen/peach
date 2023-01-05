@@ -11,11 +11,10 @@ function argsx(...inputs: Array<Input | Input[]>): string[] {
         } else if (Array.isArray(input)) {
             result.push(...argsx(input));
         } else {
-            for (const key in input) {
-                if (Object.prototype.hasOwnProperty.call(input, key)) {
-                    const value = input[key];
-                    if (value) result.push(key);
-                }
+            const keys = Object.keys(input);
+            for (const key of keys) {
+                const value = input[key];
+                if (value) result.push(key);
             }
         }
     }

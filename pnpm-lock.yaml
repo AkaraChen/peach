@@ -14,7 +14,7 @@ specifiers:
   rollup: ^3.9.0
   rollup-plugin-ts: ^3.0.2
   tslib: ^2.4.1
-  typescript: ^4.9.4
+  typescript: ^5.0.0
 
 devDependencies:
   '@rollup/plugin-commonjs': 24.0.0_rollup@3.9.0
@@ -28,9 +28,9 @@ devDependencies:
   ora: 6.1.2
   prompts: 2.4.2
   rollup: 3.9.0
-  rollup-plugin-ts: 3.0.2_fjmngzu5qr6xzjooxkpjm6imha
+  rollup-plugin-ts: 3.0.2_lnwlm6rvbvfj7vxrynsjetdcpe
   tslib: 2.4.1
-  typescript: 4.9.4
+  typescript: 5.0.2
 
 packages:
 
@@ -669,14 +669,14 @@ packages:
     resolution: {integrity: sha512-W9pAhw0ja1Edb5GVdIF1mjZw/ASI0AlShXM83UUGe2DVr5TdAPEA1OA8m/g8zWp9x6On7gqufY+FatDbC3MDQg==}
     dev: true
 
-  /compatfactory/1.0.1_typescript@4.9.4:
+  /compatfactory/1.0.1_typescript@5.0.2:
     resolution: {integrity: sha512-hR9u0HSZTKDNNchPtMHg6myeNx0XO+av7UZIJPsi4rPALJBHi/W5Mbwi19hC/xm6y3JkYpxVYjTqnSGsU5X/iw==}
     engines: {node: '>=14.9.0'}
     peerDependencies:
       typescript: '>=3.x || >= 4.x'
     dependencies:
       helpertypes: 0.0.18
-      typescript: 4.9.4
+      typescript: 5.0.2
     dev: true
 
   /concat-map/0.0.1:
@@ -2155,7 +2155,7 @@ packages:
       glob: 7.2.3
     dev: true
 
-  /rollup-plugin-ts/3.0.2_fjmngzu5qr6xzjooxkpjm6imha:
+  /rollup-plugin-ts/3.0.2_lnwlm6rvbvfj7vxrynsjetdcpe:
     resolution: {integrity: sha512-67qi2QTHewhLyKDG6fX3jpohWpmUPPIT/xJ7rsYK46X6MqmoWy64Ti0y8ygPfLv8mXDCdRZUofM3mTxDfCswRA==}
     engines: {node: '>=14.9.0', npm: '>=7.0.0', pnpm: '>=3.2.0', yarn: '>=1.13'}
     peerDependencies:
@@ -2189,13 +2189,13 @@ packages:
       ansi-colors: 4.1.3
       browserslist: 4.21.4
       browserslist-generator: 1.0.66
-      compatfactory: 1.0.1_typescript@4.9.4
+      compatfactory: 1.0.1_typescript@5.0.2
       crosspath: 2.0.0
       magic-string: 0.26.7
       rollup: 3.9.0
-      ts-clone-node: 1.0.0_typescript@4.9.4
+      ts-clone-node: 1.0.0_typescript@5.0.2
       tslib: 2.4.1
-      typescript: 4.9.4
+      typescript: 5.0.2
     dev: true
 
   /rollup/3.9.0:
@@ -2404,14 +2404,14 @@ packages:
       is-number: 7.0.0
     dev: true
 
-  /ts-clone-node/1.0.0_typescript@4.9.4:
+  /ts-clone-node/1.0.0_typescript@5.0.2:
     resolution: {integrity: sha512-/cDYbr2HAXxFNeTT41c/xs/2bhLJjqnYheHsmA3AoHSt+n4JA4t0FL9Lk5O8kWnJ6jeB3kPcUoXIFtwERNzv6Q==}
     engines: {node: '>=14.9.0'}
     peerDependencies:
       typescript: ^3.x || ^4.x
     dependencies:
-      compatfactory: 1.0.1_typescript@4.9.4
-      typescript: 4.9.4
+      compatfactory: 1.0.1_typescript@5.0.2
+      typescript: 5.0.2
     dev: true
 
   /tsconfig-paths/3.14.1:
@@ -2466,6 +2466,12 @@ packages:
   /typescript/4.9.4:
     resolution: {integrity: sha512-Uz+dTXYzxXXbsFpM86Wh3dKCxrQqUcVMxwU54orwlJjOpO3ao8L7j5lH+dWfTwgCwIuM9GQ2kvVotzYJMXTBZg==}
     engines: {node: '>=4.2.0'}
+    hasBin: true
+    dev: true
+
+  /typescript/5.0.2:
+    resolution: {integrity: sha512-wVORMBGO/FAs/++blGNeAVdbNKtIh1rbBL2EyQ1+J9lClJ93KiiKe8PmFIVdXhHcyv44SL9oglmfeSsndo0jRw==}
+    engines: {node: '>=12.20'}
     hasBin: true
     dev: true
 

@@ -1,7 +1,7 @@
 lockfileVersion: 5.4
 
 specifiers:
-  '@rollup/plugin-commonjs': ^24.0.0
+  '@rollup/plugin-commonjs': ^25.0.0
   '@rollup/plugin-json': ^6.0.0
   '@rollup/plugin-node-resolve': ^15.0.1
   '@types/prompts': ^2.4.2
@@ -17,7 +17,7 @@ specifiers:
   typescript: ^5.0.0
 
 devDependencies:
-  '@rollup/plugin-commonjs': 24.0.0_rollup@3.9.0
+  '@rollup/plugin-commonjs': 25.0.0_rollup@3.9.0
   '@rollup/plugin-json': 6.0.0_rollup@3.9.0
   '@rollup/plugin-node-resolve': 15.0.1_rollup@3.9.0
   '@types/prompts': 2.4.2
@@ -131,8 +131,8 @@ packages:
       fastq: 1.15.0
     dev: true
 
-  /@rollup/plugin-commonjs/24.0.0_rollup@3.9.0:
-    resolution: {integrity: sha512-0w0wyykzdyRRPHOb0cQt14mIBLujfAv6GgP6g8nvg/iBxEm112t3YPPq+Buqe2+imvElTka+bjNlJ/gB56TD8g==}
+  /@rollup/plugin-commonjs/25.0.0_rollup@3.9.0:
+    resolution: {integrity: sha512-hoho2Kay9TZrLu0bnDsTTCaj4Npa+THk9snajP/XDNb9a9mmjTjh52EQM9sKl3HD1LsnihX7js+eA2sd2uKAhw==}
     engines: {node: '>=14.0.0'}
     peerDependencies:
       rollup: ^2.68.0||^3.0.0
